@@ -12,6 +12,7 @@ lib-cov
 node_modules/
 
 public/uploads
+public/temp
 
 pids
 logs
