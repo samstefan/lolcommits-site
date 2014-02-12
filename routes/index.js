@@ -17,7 +17,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
 
     console.log('img:', img)
     fs.readFile(req.files.file.path, function (err, data) {
-      var newPath = __dirname + '/uploads/uploadedFileName'
+      var newPath = __dirname + '/uploads/'
       fs.writeFile(newPath, data, function (err) {
         res.redirect('back')
       })
