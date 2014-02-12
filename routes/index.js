@@ -20,7 +20,11 @@ module.exports.loadRoutes = function (serviceLocator, app) {
       fs.writeFile(newPath, data, function (err) {
         if (err) throw err;
         console.log('Saved image.')
-        res.redirect('Saved Image')
+        res.json(
+          { 'status': 'success'
+          , 'message': 'success message'
+          }
+        )
       })
     })
   })
