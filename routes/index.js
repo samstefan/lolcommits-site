@@ -9,7 +9,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
 
   // Post requests for commits.
   app.post('/get-commit', function(req, res){
-    app.use(express.bodyParser({
+    app.use(app.bodyParser({
       keepExtensions: true
     , uploadDir: __dirname + '/public/photos'
     }))
