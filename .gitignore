@@ -11,6 +11,8 @@ lib-cov
 
 node_modules/
 
+public/uploads
+
 pids
 logs
 results
