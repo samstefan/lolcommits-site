@@ -20,11 +20,6 @@ app.use(express.methodOverride())
 app.use(app.router)
 app.use(express.static(path.join(__dirname, 'public')))
 
-// development only
-if ('development' === app.get('env')) {
-  app.use(express.errorHandler())
-}
-
 require('./routes').loadRoutes(serviceLocator, app)
 
 http.createServer(app).listen(app.get('port'), function(){
