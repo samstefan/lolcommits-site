@@ -21,5 +21,5 @@ app.use(express.static(path.join(__dirname, 'public')))
 require('./routes').loadRoutes(serviceLocator, app)
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'))
+  serviceLocator.logger.info('Express server listening on port ' + app.get('port'))
 })

@@ -19,7 +19,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
       var newPath = uploadPath + req.files.file.name
       fs.writeFile(newPath, data, function (err) {
         if (err) throw err;
-        console.log('Saved image.')
+        serviceLocator.logger.info('Saved image')
         res.json(
           { 'status': 'success'
           , 'message': 'Image Saved!'
