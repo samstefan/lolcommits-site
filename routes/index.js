@@ -11,7 +11,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
     })
   })
 
-  // Post requests for commits.
+  // Post requests for commits..
   app.post('/get-commit', function(req, res){
     var img = req.files.photo.image
     console.log(img)
