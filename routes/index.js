@@ -14,10 +14,11 @@ module.exports.loadRoutes = function (serviceLocator, app) {
   app.post('/get-commit', function(req, res){
     fs.readFile(req.files.file.path, function (err, data) {
       if (err) throw err;
-      var newPath = path.normalize(__dirname + '/../public/uploads/') + 'data.name'
+      var newPath = path.normalize(__dirname + '/../public/uploads/') + data.name
       fs.writeFile(newPath, data, function (err) {
         if (err) throw err;
         console.log('Saved image.')
+        res.redirect('Saved Image')
       })
     })
   })
