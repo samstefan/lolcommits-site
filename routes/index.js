@@ -15,7 +15,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
   app.post('/get-commit', function(req, res){
     var img = req.files
 
-    fs.readFile(req.files.displayImage.path, function (err, data) {
+    fs.readFile(req.files.path, function (err, data) {
       var newPath = __dirname + '/uploads/uploadedFileName'
       fs.writeFile(newPath, data, function (err) {
         res.redirect('back')
