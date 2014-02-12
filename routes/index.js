@@ -10,7 +10,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
     })
   })
 
-  // Post requests for commits
+  // Post requests for commits.
   app.post('/get-commit', function(req, res){
     fs.readFile(req.files.displayImage.path, function (err, data) {
       var newPath = __dirname + '/uploads/uploadedFileName'
