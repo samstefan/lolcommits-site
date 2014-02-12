@@ -22,13 +22,11 @@ module.exports.loadRoutes = function (serviceLocator, app) {
         console.log('Saved image.')
         res.json(
           { 'status': 'success'
-          , 'message': 'success message'
+          , 'message': 'Image Saved!'
           }
         )
       })
     })
   })
-
-
 
 }

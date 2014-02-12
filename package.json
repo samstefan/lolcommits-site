@@ -10,6 +10,11 @@
     "jade": "*",
     "stylus": "*",
     "service-locator": "~0.0.2",
-    "bunyan": "0.22.0"
+    "bunyan": "0.22.0",
+    "grunt": "~0.4",
+    "grunt-cli": "~0.1",
+    "grunt-reload": "~0.2",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-stylus": "~0.7.0"
   }
 }
