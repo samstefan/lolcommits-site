@@ -1,6 +1,7 @@
 var fs = require('fs')
+  , path = require('path')
 
-module.exports.loadRoutes = function (serviceLocator, app, path) {
+module.exports.loadRoutes = function (serviceLocator, app) {
 
   // Index
   app.get('/', function(req, res){
