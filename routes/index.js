@@ -14,7 +14,9 @@ module.exports.loadRoutes = function (serviceLocator, app) {
 
   // Post requests for commits..
   app.post('/get-commit', function(req, res){
+
     var dateTaken = new Date(req.files.file.lastModifiedDate)
+
     fs.readFile(req.files.file.path, function (err, data) {
       if (err) throw err
       var newPath = uploadPath + dateTaken.toJSON() + '-' +  req.files.file.name
