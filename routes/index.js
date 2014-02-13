@@ -8,7 +8,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
   app.get('/', function(req, res){
     res.render('index', {
       page: 'index'
-    , images: fs.readdirSync(uploadPath)
+    , images: fs.readdirSync(uploadPath).reverse()
     })
   })
 
