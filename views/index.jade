@@ -4,4 +4,5 @@ block content
   h1 LOL Commits
 
   each item in images
-    img(src='/uploads/'+item)
+    if ( item != '.DS_Store')
+      img(src='/uploads/'+item)
