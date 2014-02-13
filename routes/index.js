@@ -14,9 +14,10 @@ module.exports.loadRoutes = function (serviceLocator, app) {
 
   // Post requests for commits..
   app.post('/get-commit', function(req, res){
+    var dataTaken = new Date(req.files.file.lastModifiedDate)
     fs.readFile(req.files.file.path, function (err, data) {
-      if (err) throw err;
-      var newPath = uploadPath + req.files.file.lastModifiedDate + '-' +  req.files.file.name
+      if (err) throw err
+      var newPath = uploadPath + dateTaken.toJSON() + '-' +  req.files.file.name
       fs.writeFile(newPath, data, function (err) {
         if (err) throw err;
         serviceLocator.logger.info('Saved image')
