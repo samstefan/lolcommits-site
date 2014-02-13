@@ -10,10 +10,10 @@ serviceLocator
   .register('logger', bunyan.createLogger({ name: 'lolcommits-site' }))
 
 // all environments
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3011)
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
-app.use(express.bodyParser({keepExtensions: true, uploadDir: __dirname + '/public/temp'}))
+app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + '/public/temp' }))
 app.use(express.methodOverride())
 app.use(app.router)
 app.use(express.static(path.join(__dirname, 'public')))
