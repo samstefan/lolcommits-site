@@ -8,11 +8,35 @@ body
   font 14px Helvetica, Arial, sans-serif
   padding 5px
 
+header
+  width 100%
+  float left
+
 img
-  width 20%
   float left
   padding 5px
 
 h1
   font-size 40px
   font-weight bold
+  float left
+
+.credits
+  float right
+  font-size 12px
+  margin 15px 5px 0 0
+
+@media (max-width: 600px)
+
+  img
+    width 100%
+
+@media (min-width: 601px) and (max-width: 1102px)
+
+  img
+    width 33.3%
+
+@media (min-width: 1103px)
+
+  img
+    width 20%

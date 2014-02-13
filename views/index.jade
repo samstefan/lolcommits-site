@@ -1,7 +1,10 @@
 extends layout
 
 block content
-  h1 LOL Commits
+  header
+    h1 LOL Commits
+
+    a.credits(href="https://github.com/mroth/lolcommits", title="Lol Commits", targer="_blank") Built with lolcommits
 
   each item in images
     if ( item != '.DS_Store')
