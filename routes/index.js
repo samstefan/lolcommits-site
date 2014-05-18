@@ -36,7 +36,7 @@ module.exports.loadRoutes = function (serviceLocator, app) {
             )
             // Send file to slack
             slack.send({
-              text: 'http://lol.samstefan.co.uk' + newPath,
+              text: 'http://lol.samstefan.co.uk/uploads/' + dateTaken.toJSON() + '-' +  req.files.file.name,
               channel: '#random',
               username: 'LOL Commits'
             })
